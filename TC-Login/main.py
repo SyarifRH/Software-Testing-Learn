@@ -1,24 +1,22 @@
 import pytest
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-from webdriver_manager.chrome import ChromeDriverManager
+from webdriver_manager.firefox import GeckoDriverManager  # Mengganti ChromeDriverManager dengan GeckoDriverManager
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.keys import Keys
 import time
 from data import addData
-from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.firefox.service import Service  # Mengganti Chrome service dengan Firefox service
 from allure import attach
-
 
 @pytest.fixture(scope='module')
 def browser():
-    chrome_service = Service(ChromeDriverManager().install())
-    driver = webdriver.Chrome(service=chrome_service)
+    firefox_service = Service(GeckoDriverManager().install())  # Mengganti ChromeDriverManager dengan GeckoDriverManager
+    driver = webdriver.Firefox(service=firefox_service)  # Mengganti Chrome dengan Firefox
     driver.maximize_window()
     yield driver
     driver.quit()
-
 
 def test_BR_001(browser):
     driver = browser
