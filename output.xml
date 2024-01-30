@@ -1,49 +1,126 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.11.1 on win32)" generated="2024-01-27T13:49:33.876000" rpa="false" schemaversion="5">
-<suite id="s1" name="Test" source="D:\DATA RIDHO\AKSARAMAYA\Software-Testing-Learn\test.robot">
-<test id="s1-t1" name="Buka google" line="8">
+<robot generator="Robot 7.0 (Python 3.11.1 on win32)" generated="2024-01-30T22:24:37.362067" rpa="false" schemaversion="5">
+<suite id="s1" name="testSuites" source="d:\DATA RIDHO\AKSARAMAYA\Software-Testing-Learn\testSuites.robot">
+<test id="s1-t1" name="ePustaka" line="37">
+<kw name="Ubah ePustaka" owner="testCase">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-01-27T13:49:34.494646" level="INFO">Opening browser 'chrome' to base url 'https://d1cjkrpphak3fo.cloudfront.net/'.</msg>
+<msg time="2024-01-30T22:24:37.988387" level="INFO">Opening browser 'chrome' to base url 'https://d1cjkrpphak3fo.cloudfront.net/'.</msg>
 <arg>${URL}</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-01-27T13:49:34.494646" elapsed="4.126065"/>
+<status status="PASS" start="2024-01-30T22:24:37.987386" elapsed="6.349742"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>xpath://input[@id='normal_login_email']</arg>
+<arg>//input[@id='normal_login_email']</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-01-27T13:49:38.622711" elapsed="3.600987"/>
+<status status="PASS" start="2024-01-30T22:24:44.338128" elapsed="0.652045"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-01-30T22:24:44.992167" elapsed="0.135661"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-01-27T13:49:42.225695" level="INFO">Typing text 'iinhu@grr.la' into text field '//input[@id='normal_login_email']'.</msg>
+<msg time="2024-01-30T22:24:45.129826" level="INFO">Typing text 'iinhu@grr.la' into text field '//input[@id='normal_login_email']'.</msg>
 <arg>//input[@id='normal_login_email']</arg>
-<arg>iinhu@grr.la</arg>
+<arg>${emailValid}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-01-27T13:49:42.224696" elapsed="0.384779"/>
+<status status="PASS" start="2024-01-30T22:24:45.128826" elapsed="0.423498"/>
 </kw>
 <kw name="Input Password" owner="SeleniumLibrary">
-<msg time="2024-01-27T13:49:42.610475" level="INFO">Typing password into text field '//input[@id='normal_login_password']'.</msg>
-<msg time="2024-01-27T13:49:42.825396" level="INFO">Temporally setting log level to: NONE</msg>
+<msg time="2024-01-30T22:24:45.555322" level="INFO">Typing password into text field '//input[@id='normal_login_password']'.</msg>
+<msg time="2024-01-30T22:24:45.729554" level="INFO">Temporally setting log level to: NONE</msg>
 <arg>//input[@id='normal_login_password']</arg>
-<arg>12345678</arg>
+<arg>${passwordValid}</arg>
 <doc>Types the given password into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-01-27T13:49:42.610475" elapsed="0.476764"/>
+<status status="PASS" start="2024-01-30T22:24:45.553323" elapsed="0.462073"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-01-27T13:49:43.092231" level="INFO">Clicking element '//span[contains(text(),'Masuk')]'.</msg>
+<msg time="2024-01-30T22:24:46.019390" level="INFO">Clicking element '//span[contains(text(),'Masuk')]'.</msg>
 <arg>//span[contains(text(),'Masuk')]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-01-27T13:49:43.090232" elapsed="0.245381"/>
+<status status="PASS" start="2024-01-30T22:24:46.017392" elapsed="0.360793"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//div[contains(text(),'Kategori Buku')]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-01-30T22:24:46.379182" elapsed="2.994131"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-01-30T22:24:49.375313" level="INFO">Clicking element '//span[contains(text(),'ePustaka')]'.</msg>
+<arg>//span[contains(text(),'ePustaka')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-30T22:24:49.374317" elapsed="0.579486"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//a[normalize-space()='ePustaka']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-01-30T22:24:49.959797" elapsed="0.106940"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-01-30T22:24:50.068736" level="INFO">Clicking element '//a[normalize-space()='ePustaka']'.</msg>
+<arg>//a[normalize-space()='ePustaka']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-30T22:24:50.067736" elapsed="0.321823"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-01-27T13:49:48.339245" level="INFO">Slept 5 seconds.</msg>
-<arg>5</arg>
+<msg time="2024-01-30T22:24:53.394719" level="INFO">Slept 3 seconds.</msg>
+<arg>3</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-01-27T13:49:43.337611" elapsed="5.001634"/>
+<status status="PASS" start="2024-01-30T22:24:50.391556" elapsed="3.003163"/>
 </kw>
-<status status="PASS" start="2024-01-27T13:49:34.490648" elapsed="13.850747"/>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2024-01-30T22:24:53.438224" level="INFO">Current page contains text 'Pustaka'.</msg>
+<arg>Pustaka</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2024-01-30T22:24:53.394719" elapsed="0.044499"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-01-30T22:24:53.440217" level="INFO">Clicking element '//tbody/tr[2]/td[11]/button[1]'.</msg>
+<arg>//tbody/tr[2]/td[11]/button[1]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-30T22:24:53.440217" elapsed="0.174871"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-01-30T22:24:55.618427" level="INFO">Slept 2 seconds.</msg>
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-01-30T22:24:53.616084" elapsed="2.002343"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-01-30T22:24:55.620421" level="INFO">Clicking element '//span[contains(text(),'Ubah')]'.</msg>
+<arg>//span[contains(text(),'Ubah')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-30T22:24:55.618427" elapsed="0.141511"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//span[contains(text(),'Dev Centralized')]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-01-30T22:24:55.760936" elapsed="1.823069"/>
+</kw>
+<kw name="Press Keys" owner="SeleniumLibrary">
+<msg time="2024-01-30T22:24:57.589003" level="INFO">Sending key(s) ('CTRL+A+BACKSPACE',) to //input[@id='epustakaForm_epustaka_name'] element.</msg>
+<msg time="2024-01-30T22:24:58.065735" level="INFO">Pressing special key CONTROL down.</msg>
+<msg time="2024-01-30T22:24:58.066732" level="INFO">Sending key A</msg>
+<msg time="2024-01-30T22:24:58.067732" level="INFO">Pressing special key BACKSPACE down.</msg>
+<msg time="2024-01-30T22:24:58.068731" level="INFO">Releasing special key CONTROL.</msg>
+<msg time="2024-01-30T22:24:58.071728" level="INFO">Releasing special key BACKSPACE.</msg>
+<arg>//input[@id='epustakaForm_epustaka_name']</arg>
+<arg>CTRL+A+BACKSPACE</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<status status="PASS" start="2024-01-30T22:24:57.585005" elapsed="0.816274"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-01-30T22:24:58.406273" level="INFO">Typing text 'Development' into text field '//input[@id='epustakaForm_epustaka_name']'.</msg>
+<arg>//input[@id='epustakaForm_epustaka_name']</arg>
+<arg>Development</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-01-30T22:24:58.403283" elapsed="0.845604"/>
+</kw>
+<status status="PASS" start="2024-01-30T22:24:37.984389" elapsed="21.265493"/>
+</kw>
+<status status="PASS" start="2024-01-30T22:24:37.981391" elapsed="21.286479"/>
 </test>
-<status status="PASS" start="2024-01-27T13:49:33.879998" elapsed="14.467388"/>
+<status status="PASS" start="2024-01-30T22:24:37.380059" elapsed="21.984769"/>
 </suite>
 <statistics>
 <total>
@@ -52,7 +129,7 @@
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Test">Test</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="testSuites">testSuites</stat>
 </suite>
 </statistics>
 <errors>
